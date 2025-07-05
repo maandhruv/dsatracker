@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 🧠 DSA Tracker
+
+A full-stack web application for tracking your progress in DSA (Data Structures & Algorithms) topics. Built with **Next.js 15 App Router**, **Supabase**, and **Tailwind CSS**.
+
+## 🚀 Features
+
+- ✅ User authentication with GitHub (via Supabase)
+- 📊 Interactive table of DSA problems per topic
+- 🔖 Mark problems as solved/starred
+- 🧭 Dynamic routing (e.g. `/problems/arrays`, `/problems/linked-list`)
+- 🔄 Persistent progress stored per user in Supabase
+- 📱 Responsive UI with Tailwind CSS
+
+---
+
+
+
+## 🧑‍💻 Tech Stack
+
+- [Next.js 15](https://nextjs.org/)
+- [Supabase](https://supabase.com/) (Auth + DB)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/) (Hosting)
+
+---
+
+## 🔐 Authentication
+
+Authentication is powered by Supabase with GitHub OAuth.
+
+You’ll need to:
+
+    1. Create a Supabase project
+    2. Enable GitHub Auth and provide:
+    - Client ID
+    - Client Secret
+    3. Set redirect URLs:
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[https://your-vercel-deployment.vercel.app](https://your-vercel-deployment.vercel.app)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ⚙️ Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a `.env.local` file with the following:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+NEXT_PUBLIC_SUPABASE_URL=https://your-project-id.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+````
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+In Vercel: Set the same in **Project → Settings → Environment Variables**
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Running Locally
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+git clone https://github.com/yourusername/dsa-tracker.git
+cd dsa-tracker
+npm install
+npm run dev
+```
+
+Then open [http://localhost:3000](http://localhost:3000)
+
+
+
+## 🌐 Deployment
+
+Deployed on **Vercel**.
+
+    1. Connect your GitHub repo
+    2. Add env variables in Vercel dashboard
+    3. Done! Supabase + Next.js work seamlessly on Vercel
+
+---
+
+
+
+## 🙌 Credits
+
+Built by [Dhruv Maan](https://github.com/maandhruv) with ❤️ using Supabase and Next.js
+
+---
+
+
+
