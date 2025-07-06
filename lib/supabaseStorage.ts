@@ -12,7 +12,7 @@ export const getProblemStatus = async (topic: string, problemId: number) => {
     .from('problem_progress')
     .select('status, starred')
     .eq('user_id', user_id)
-    .eq('topic_slug', topic) // ✅ FIXED
+    .eq('topic_slug', topic)
     .eq('problem_id', problemId)
     .single()
   return error ? null : data
@@ -25,7 +25,7 @@ export const toggleProblemStatus = async (topic: string, problemId: number) => {
     .from('problem_progress')
     .select('status')
     .eq('user_id', user_id)
-    .eq('topic_slug', topic) // ✅ FIXED
+    .eq('topic_slug', topic) 
     .eq('problem_id', problemId)
     .single()
 
@@ -60,7 +60,7 @@ export const toggleProblemStar = async (topic: string, problemId: number) => {
     .from('problem_progress')
     .upsert({
       user_id,
-      topic_slug: topic,     // ✅ FIXED
+      topic_slug: topic,     
       problem_id: problemId,
       starred: newStar,
     }, { onConflict: 'user_id,topic_slug,problem_id' }) // ✅ FIXED
@@ -75,7 +75,7 @@ export const getTopicProgress = async (topic: string): Promise<{ solved: number 
     .from('problem_progress')
     .select('*')
     .eq('user_id', user_id)
-    .eq('topic_slug', topic) // ✅ FIXED
+    .eq('topic_slug', topic) 
     .eq('status', 'solved')
 
   return { solved: data?.length || 0 }
