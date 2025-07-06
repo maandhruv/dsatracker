@@ -418,7 +418,7 @@ export const questionsData = {
         "name": "Kth Largest Element in an Array",
         "difficulty": "Medium",
         "hasVideo": true,
-        "link": "https://leetcode.com/problems/kth-largest-element-in-a-array/description/"
+        "link": "https://leetcode.com/problems/kth-largest-element-in-an-array/description/"
       },
       {
         "id": 2,
