@@ -16,7 +16,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-4 pt-4 border-t border-gray-800 text-center text-gray-500">
-          <p>&copy; 2024 DSA Tracker. All rights reserved.</p>
+          <p>&copy; 2025 DSA Tracker. All rights reserved.</p>
         </div>
       </div>
     </footer>
